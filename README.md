@@ -1,6 +1,6 @@
 # Life Source
 
-This is a solution that rewards users with token for recycling and use them to uphold the SDG goals (on creator - 5115)
+This is a solution that rewards users with token for recycling and use them to uphold the SDG goals (on creator - 66665)
 
 - Clean Water and Sanitation
 - Climate Action
