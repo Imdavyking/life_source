@@ -88,7 +88,7 @@ const Home = () => {
               SPONSORS
             </h2>
             <div className="flex items-center gap-3">
-              <img alt="LifeSource" className="w-40" src={creatorLogo} />
+              <img alt="LifeSource" className="w-32" src={creatorLogo} />
             </div>
           </div>
           <Footer />
