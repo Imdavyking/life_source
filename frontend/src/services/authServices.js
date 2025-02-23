@@ -60,7 +60,7 @@ const getContract = async () => {
   const signer = getSigner();
   await switchOrAddcreative(signer.provider);
   return new ethers.Contract(
-    "0x7b8DAfb189b8274FA34AE9965fB9e496Bdd609ED",
+    "0x0c56Dfe5228C69011bB006adbd5E9c2B748b04B2",
     abi,
     signer
   );

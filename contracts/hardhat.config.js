@@ -33,6 +33,9 @@ module.exports = {
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
             saveDeployments: true,
             chainId: 66665,
+            gasMultiplier: 1.5,
+            gas: 5000000,
+            gasPrice: 1000000000,
         },
     },
     gasReporter: {
