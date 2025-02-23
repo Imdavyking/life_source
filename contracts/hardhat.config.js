@@ -28,7 +28,7 @@ module.exports = {
             chainId: 31337,
         },
 
-        creative: {
+        creator: {
             url: RPC_URL,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
             saveDeployments: true,

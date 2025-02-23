@@ -1,6 +1,6 @@
 # Life Source
 
-This is a solution that rewards users with token for recycling and use them to uphold the SDG goals (on creative - 5115)
+This is a solution that rewards users with token for recycling and use them to uphold the SDG goals (on creator - 5115)
 
 - Clean Water and Sanitation
 - Climate Action
@@ -10,7 +10,7 @@ This is a solution that rewards users with token for recycling and use them to u
 # Methodolgy
 
 Contract
-[lifeSource Contracts](https://github.com/Imdavyking/life_source_creative_contracts)
+[lifeSource Contracts](https://github.com/Imdavyking/life_source_creator_contracts)
 
 ## Requirements
 

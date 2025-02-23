@@ -2,30 +2,30 @@
 import abi from "@/assets/json/abi.json";
 import { ethers } from "ethers";
 
-async function switchOrAddcreative(ethProvider) {
+async function switchOrAddcreator(ethProvider) {
   try {
     const chainId = await ethProvider.provider.request({
       method: "eth_chainId",
     });
-    const creativeChainId = `0x${Number(66665).toString(16)}`;
-    // Check if the current chain is creative Testnet
-    if (chainId !== creativeChainId) {
-      // Try to switch to creative Testnet
+    const creatorChainId = `0x${Number(66665).toString(16)}`;
+    // Check if the current chain is creator Testnet
+    if (chainId !== creatorChainId) {
+      // Try to switch to creator Testnet
       await ethProvider.provider.request({
         method: "wallet_switchEthereumChain",
-        params: [{ chainId: creativeChainId }], // creative Testnet Chain ID
+        params: [{ chainId: creatorChainId }], // creator Testnet Chain ID
       });
-      console.log("Switched to creative Testnet");
+      console.log("Switched to creator Testnet");
 
       if (error.code === 4902) {
         await ethProvider.provider.request({
           method: "wallet_addEthereumChain",
           params: [
             {
-              chainId: creativeChainId,
-              chainName: "Creative Testnet",
+              chainId: creatorChainId,
+              chainName: "creator Testnet",
               nativeCurrency: {
-                name: "Creative Ether",
+                name: "creator Ether",
                 symbol: "ETH",
                 decimals: 18,
               },
@@ -34,12 +34,12 @@ async function switchOrAddcreative(ethProvider) {
             },
           ],
         });
-        console.log("creative Testnet added and switched");
+        console.log("creator Testnet added and switched");
       } else {
-        console.error("Failed to switch to creative Testnet:", error);
+        console.error("Failed to switch to creator Testnet:", error);
       }
     } else {
-      console.log("Already connected to creative Testnet");
+      console.log("Already connected to creator Testnet");
     }
   } catch (error) {}
 }
@@ -58,7 +58,7 @@ const getContract = async () => {
     return;
   }
   const signer = getSigner();
-  await switchOrAddcreative(signer.provider);
+  await switchOrAddcreator(signer.provider);
   return new ethers.Contract(
     "0x0c56Dfe5228C69011bB006adbd5E9c2B748b04B2",
     abi,

@@ -7,7 +7,7 @@ import Footer from "@/base-components/footer";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import logoUrl from "@/assets/images/logo.png";
 import illustrationUrl from "@/assets/images/illustration.svg";
-import creativeLogo from "@/assets/images/creative.svg";
+import creatorLogo from "@/assets/images/creator.svg";
 import { useWallet } from "@/App";
 import { ethers } from "ethers";
 import { getFirstAndLast4Chars } from "../../App";
@@ -88,7 +88,7 @@ const Home = () => {
               SPONSORS
             </h2>
             <div className="flex items-center gap-3">
-              <img alt="LifeSource" className="w-40" src={creativeLogo} />
+              <img alt="LifeSource" className="w-40" src={creatorLogo} />
             </div>
           </div>
           <Footer />
