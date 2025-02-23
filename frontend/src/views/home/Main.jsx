@@ -7,7 +7,7 @@ import Footer from "@/base-components/footer";
 import dom from "@left4code/tw-starter/dist/js/dom";
 import logoUrl from "@/assets/images/logo.png";
 import illustrationUrl from "@/assets/images/illustration.svg";
-import creatorLogo from "@/assets/images/creator.svg";
+import creatorLogo from "@/assets/images/creator.png";
 import { useWallet } from "@/App";
 import { ethers } from "ethers";
 import { getFirstAndLast4Chars } from "../../App";
