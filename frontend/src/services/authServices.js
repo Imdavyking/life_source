@@ -71,10 +71,10 @@ export const addPointService = async (weight) => {
     const lifeSourceManager = await getContract();
     const tx = await lifeSourceManager.addPointFromWeight(Math.trunc(weight));
     await tx.wait(1);
-    return true;
+    return `Added ${weight} points`;
   } catch (error) {
     console.log(error);
-    return false;
+    return `failed to add ${weight} points`;
   }
 };
 export const getPointsService = async () => {
@@ -92,14 +92,14 @@ export const getPointsService = async () => {
   }
 };
 
-export const redeemCodeService = async (point) => {
+export const redeemCodeService = async (points) => {
   try {
     const lifeSourceManager = await getContract();
-    const tx = await lifeSourceManager.redeemCode(Math.trunc(point));
+    const tx = await lifeSourceManager.redeemCode(Math.trunc(points));
     await tx.wait(1);
-    return true;
+    return `redeemed ${points} points`;
   } catch (error) {
     console.log(error);
-    return false;
+    return `failed to redeem ${points} points`;
   }
 };
