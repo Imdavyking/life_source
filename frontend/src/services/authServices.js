@@ -2,6 +2,8 @@
 import abi from "@/assets/json/abi.json";
 import { ethers } from "ethers";
 
+const FAILED_KEY = "failed";
+
 async function switchOrAddcreator(ethProvider) {
   try {
     const chainId = await ethProvider.provider.request({
@@ -74,7 +76,7 @@ export const addPointService = async (weight) => {
     return `Added ${weight} points`;
   } catch (error) {
     console.log(error);
-    return `failed to add ${weight} points`;
+    return `${FAILED_KEY} to add ${weight} points`;
   }
 };
 export const getPointsService = async () => {
@@ -100,6 +102,13 @@ export const redeemCodeService = async (points) => {
     return `redeemed ${points} points`;
   } catch (error) {
     console.log(error);
-    return `failed to redeem ${points} points`;
+    return `${FAILED_KEY} to redeem ${points} points`;
   }
+};
+
+export const rethrowFailedResponse = (response) => {
+  if (String(response).includes(FAILED_KEY)) {
+    throw new Error(response);
+  }
+  return response;
 };
